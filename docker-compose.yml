@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  flask:
+    image: waliffcordeiro/faasdom:flask-api-1.0
+    ports:
+      - 2000:2000
+  express:
+    image: waliffcordeiro/faasdom:express-api-1.0
+    ports:
+      - 3030:3030 
+  golang:
+    image: waliffcordeiro/faasdom:golang-api-1.0
+    ports:
+        - 8000:8000

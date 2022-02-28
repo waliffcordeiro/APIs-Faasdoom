@@ -6,6 +6,8 @@ import random
 
 def python_filesystem(request):
 
+    startTime = time.time()
+
     rnd = random.randint(100000,999999)
     
     if os.path.exists("/tmp/test"):
@@ -70,6 +72,9 @@ def python_filesystem(request):
     headers = {
         'Content-Type': 'application/json'
     }
+
+    endTime = time.time()
+    print("Tempo de execução: {}".format(endTime - startTime))
     
     return (json.dumps({
         'success': len(files) == n,
